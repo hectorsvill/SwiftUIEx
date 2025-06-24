@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 struct Page: Identifiable {
     let id = UUID()
     var title: String
@@ -19,8 +18,7 @@ private let pages: [Page] = [
     Page(title: "Staff List", description: "List with sections", pageView: AnyView(StaffList())),
     Page(title: "Detail View", description: "This is the first page.", pageView: AnyView(DetailView())),
     Page(title: "Itunes Search", description: "URLSession, List", pageView: AnyView(ItunesSearch())),
-    
-
+    Page(title: "Cupcake Corner", description: "Project 10", pageView: AnyView(CupcakeCornerView())),
 ]
 
 struct PageRowView: View {
@@ -36,11 +34,9 @@ struct PageRowView: View {
             }
             .foregroundColor(.secondary)
             .font(.subheadline)
-            
         }
     }
 }
-
 
 struct DetailView: View {
     var body: some View {
